@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cuestionario Web | Royal Club</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">ROYAL CLUB</div>
+
+    <nav>
+        <a href="index.html">INICIO</a>
+        <a href="javascript.html">JAVASCRIPT</a>
+        <a href="jquery.html">JQUERY</a>
+        <a href="json.html">JSON</a>
+        <a href="hosting.html">HOSTING</a>
+        <a href="cuestionario.html">CUESTIONARIO</a>
+    </nav>
+
+</header>
+
+<main>
+
+<section>
+
+<div class="title">
+
+    <h2>CUESTIONARIO WEB</h2>
+
+    <p>
+        Comprueba cuánto aprendiste.
+    </p>
+
+</div>
+
+
+<form id="quiz" class="quiz">
+
+
+<div class="question">
+
+<h3>
+1. ¿Qué tecnología se utiliza principalmente para agregar comportamiento e interacción?
+</h3>
+
+<label>
+<input type="radio" name="q1" value="a">
+HTML
+</label>
+
+<label>
+<input type="radio" name="q1" value="b">
+CSS
+</label>
+
+<label>
+<input type="radio" name="q1" value="c">
+JavaScript
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>
+2. ¿Qué tecnología define la estructura de una página web?
+</h3>
+
+<label>
+<input type="radio" name="q2" value="a">
+HTML
+</label>
+
+<label>
+<input type="radio" name="q2" value="b">
+JSON
+</label>
+
+<label>
+<input type="radio" name="q2" value="c">
+DNS
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>
+3. ¿Qué símbolo es característico de la sintaxis de jQuery?
+</h3>
+
+<label>
+<input type="radio" name="q3" value="a">
+#
+</label>
+
+<label>
+<input type="radio" name="q3" value="b">
+$
+</label>
+
+<label>
+<input type="radio" name="q3" value="c">
+@
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>
+4. ¿Qué significa JSON?
+</h3>
+
+<label>
+<input type="radio" name="q4" value="a">
+JavaScript Object Notation
+</label>
+
+<label>
+<input type="radio" name="q4" value="b">
+Java System Online Network
+</label>
+
+<label>
+<input type="radio" name="q4" value="c">
+JavaScript Online Number
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>
+5. ¿Qué utiliza JSON para organizar información?
+</h3>
+
+<label>
+<input type="radio" name="q5" value="a">
+Pares clave-valor
+</label>
+
+<label>
+<input type="radio" name="q5" value="b">
+Solo imágenes
+</label>
+
+<label>
+<input type="radio" name="q5" value="c">
+Solo videos
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>
+6. ¿Qué es un Web Hosting?
+</h3>
+
+<label>
+<input type="radio" name="q6" value="a">
+Un lenguaje de programación
+</label>
+
+<label>
+<input type="radio" name="q6" value="b">
+Un servicio para alojar archivos de sitios web
+</label>
+
+<label>
+<input type="radio" name="q6" value="c">
+Un tipo de dominio
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>
+7. ¿Qué es un dominio?
+</h3>
+
+<label>
+<input type="radio" name="q7" value="a">
+El nombre o dirección de un sitio web
+</label>
+
+<label>
+<input type="radio" name="q7" value="b">
+Una variable
+</label>
+
+<label>
+<input type="radio" name="q7" value="c">
+Una función
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>
+8. ¿Qué significa DNS?
+</h3>
+
+<label>
+<input type="radio" name="q8" value="a">
+Digital Network Software
+</label>
+
+<label>
+<input type="radio" name="q8" value="b">
+Domain Name System
+</label>
+
+<label>
+<input type="radio" name="q8" value="c">
+Data Number Server
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>
+9. ¿Vercel puede utilizarse para desplegar sitios web?
+</h3>
+
+<label>
+<input type="radio" name="q9" value="a">
+Verdadero
+</label>
+
+<label>
+<input type="radio" name="q9" value="b">
+Falso
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>
+10. ¿CSS controla principalmente el diseño visual de una página?
+</h3>
+
+<label>
+<input type="radio" name="q10" value="a">
+Verdadero
+</label>
+
+<label>
+<input type="radio" name="q10" value="b">
+Falso
+</label>
+
+</div>
+
+
+<button
+type="button"
+class="btn"
+onclick="calificar()">
+
+CALIFICAR
+
+</button>
+
+
+<div
+id="resultado"
+class="result-box"
+style="margin-top:25px;">
+
+Responde las preguntas y presiona CALIFICAR.
+
+</div>
+
+
+</form>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<strong>ROYAL CLUB</strong>
+
+<br>
+
+Proyecto educativo de desarrollo web
+
+</footer>
+
+
+<script>
+
+function calificar() {
+
+    const respuestas = {
+
+        q1: "c",
+        q2: "a",
+        q3: "b",
+        q4: "a",
+        q5: "a",
+        q6: "b",
+        q7: "a",
+        q8: "b",
+        q9: "a",
+        q10: "a"
+
+    };
+
+    let puntos = 0;
+
+    for (let pregunta in respuestas) {
+
+        const respuesta =
+        document.querySelector(
+            'input[name="' + pregunta + '"]:checked'
+        );
+
+        if (
+            respuesta &&
+            respuesta.value === respuestas[pregunta]
+        ) {
+
+            puntos++;
+
+        }
+
+    }
+
+    let mensaje;
+
+    if (puntos >= 9) {
+
+        mensaje = "Excelente trabajo.";
+
+    } else if (puntos >= 7) {
+
+        mensaje = "Muy buen trabajo.";
+
+    } else if (puntos >= 5) {
+
+        mensaje = "Buen intento. Te recomendamos repasar.";
+
+    } else {
+
+        mensaje = "Necesitas repasar los temas.";
+
+    }
+
+    document.getElementById("resultado").innerHTML =
+        "<strong>Resultado: " +
+        puntos +
+        "/10</strong><br>" +
+        mensaje;
+
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery | Royal Club</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">ROYAL CLUB</div>
+
+    <nav>
+        <a href="index.html">INICIO</a>
+        <a href="javascript.html">JAVASCRIPT</a>
+        <a href="jquery.html">JQUERY</a>
+        <a href="json.html">JSON</a>
+        <a href="hosting.html">HOSTING</a>
+        <a href="cuestionario.html">CUESTIONARIO</a>
+    </nav>
+
+</header>
+
+<main>
+
+<section>
+
+<div class="content">
+
+<h2>jQuery</h2>
+
+<p>
+    jQuery es una biblioteca de JavaScript creada para facilitar el desarrollo
+    de páginas web. Permite realizar tareas como seleccionar elementos,
+    modificar contenido, manejar eventos y crear animaciones con una sintaxis
+    sencilla.
+</p>
+
+<h3>¿Por qué nació jQuery?</h3>
+
+<p>
+    jQuery nació para simplificar el trabajo de los desarrolladores y facilitar
+    la compatibilidad entre diferentes navegadores. En sus primeros años
+    permitió realizar muchas tareas de JavaScript utilizando menos código.
+</p>
+
+<h3>Sintaxis básica</h3>
+
+<p>
+    Una de las características más conocidas de jQuery es el símbolo
+    <strong>$</strong>, utilizado para seleccionar elementos.
+</p>
+
+<pre><code>$("#mensaje").hide();
+
+$(".boton").click(function() {
+    $("#mensaje").show();
+});</code></pre>
+
+<h3>Ventajas</h3>
+
+<ul>
+    <li>Sintaxis sencilla.</li>
+    <li>Facilita la manipulación del HTML.</li>
+    <li>Permite crear animaciones fácilmente.</li>
+    <li>Facilita el manejo de eventos.</li>
+</ul>
+
+<h3>Desventajas</h3>
+
+<ul>
+    <li>Agrega una dependencia externa.</li>
+    <li>JavaScript moderno puede realizar muchas de sus funciones.</li>
+    <li>No siempre es necesario para proyectos pequeños.</li>
+</ul>
+
+<h3>jQuery frente a JavaScript moderno</h3>
+
+<table>
+
+<tr>
+    <th>jQuery</th>
+    <th>JavaScript moderno</th>
+</tr>
+
+<tr>
+    <td>Utiliza $ para seleccionar elementos.</td>
+    <td>Utiliza métodos como querySelector.</td>
+</tr>
+
+<tr>
+    <td>Facilita algunas animaciones.</td>
+    <td>Puede utilizar CSS y JavaScript.</td>
+</tr>
+
+<tr>
+    <td>Necesita cargar la biblioteca.</td>
+    <td>No necesita una biblioteca externa.</td>
+</tr>
+
+</table>
+
+<h3>fadeIn</h3>
+
+<pre><code>$("#mensaje").fadeIn();</code></pre>
+
+<h3>slideToggle</h3>
+
+<pre><code>$("#menu").slideToggle();</code></pre>
+
+<h3>Ejemplo interactivo</h3>
+
+<button class="btn" onclick="mostrarJquery()">
+    MOSTRAR / OCULTAR
+</button>
+
+<p id="jqueryMensaje"
+style="display:none;margin-top:20px;color:#d4af69;">
+    Este texto representa un efecto similar a una animación de jQuery.
+</p>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+    <strong>ROYAL CLUB</strong>
+    <br>
+    Proyecto educativo de desarrollo web
+</footer>
+
+<script>
+
+function mostrarJquery() {
+
+    let mensaje = document.getElementById("jqueryMensaje");
+
+    if (mensaje.style.display === "none") {
+
+        mensaje.style.display = "block";
+
+    } else {
+
+        mensaje.style.display = "none";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

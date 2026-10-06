@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Royal Club</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ROYAL CLUB</div>
+
+    <nav>
+        <a href="index.html">INICIO</a>
+        <a href="javascript.html">JAVASCRIPT</a>
+        <a href="jquery.html">JQUERY</a>
+        <a href="json.html">JSON</a>
+        <a href="hosting.html">HOSTING</a>
+        <a href="cuestionario.html">CUESTIONARIO</a>
+    </nav>
+</header>
+
+<main>
+
+<section>
+    <div class="content">
+
+        <h2>JavaScript Vanilla</h2>
+
+        <p>
+            JavaScript es un lenguaje de programación utilizado principalmente
+            para agregar interactividad y comportamiento a las páginas web.
+            Permite crear páginas dinámicas que pueden responder a las acciones
+            realizadas por los usuarios.
+        </p>
+
+        <h3>¿Para qué se utiliza?</h3>
+
+        <p>
+            JavaScript permite crear botones interactivos, formularios,
+            animaciones, menús, validaciones, calculadoras, videojuegos,
+            aplicaciones web y muchas otras funciones.
+        </p>
+
+        <h3>HTML, CSS y JavaScript</h3>
+
+        <table>
+            <tr>
+                <th>Tecnología</th>
+                <th>Función</th>
+            </tr>
+
+            <tr>
+                <td>HTML</td>
+                <td>Define la estructura y el contenido de la página.</td>
+            </tr>
+
+            <tr>
+                <td>CSS</td>
+                <td>Controla los colores, tamaños, posiciones y diseño.</td>
+            </tr>
+
+            <tr>
+                <td>JavaScript</td>
+                <td>Agrega comportamiento e interacción.</td>
+            </tr>
+        </table>
+
+        <h3>Variables</h3>
+
+        <p>
+            Una variable permite almacenar información que puede utilizarse
+            durante la ejecución de un programa.
+        </p>
+
+        <pre><code>let nombre = "Royal Club";
+let edad = 16;</code></pre>
+
+        <h3>Funciones</h3>
+
+        <p>
+            Una función es un conjunto de instrucciones que realiza una tarea
+            específica cuando es llamada.
+        </p>
+
+        <pre><code>function saludar() {
+    alert("Bienvenido a Royal Club");
+}</code></pre>
+
+        <h3>Eventos</h3>
+
+        <p>
+            Los eventos permiten que JavaScript responda a las acciones del
+            usuario. Algunos ejemplos son click, mouseover y keydown.
+        </p>
+
+        <h3>Ejemplo práctico</h3>
+
+        <pre><code>function mostrarMensaje() {
+    document.getElementById("mensaje").textContent =
+    "JavaScript está funcionando correctamente.";
+}</code></pre>
+
+        <button class="btn" onclick="mostrarMensaje()">
+            PROBAR JAVASCRIPT
+        </button>
+
+        <p id="mensaje" style="margin-top:20px;color:#d4af69;"></p>
+
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <strong>ROYAL CLUB</strong>
+    <br>
+    Proyecto educativo de desarrollo web
+</footer>
+
+<script>
+
+function mostrarMensaje() {
+
+    document.getElementById("mensaje").textContent =
+    "JavaScript está funcionando correctamente.";
+
+}
+
+</script>
+
+</body>
+</html>

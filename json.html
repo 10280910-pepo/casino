@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JSON | Royal Club</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">ROYAL CLUB</div>
+
+    <nav>
+        <a href="index.html">INICIO</a>
+        <a href="javascript.html">JAVASCRIPT</a>
+        <a href="jquery.html">JQUERY</a>
+        <a href="json.html">JSON</a>
+        <a href="hosting.html">HOSTING</a>
+        <a href="cuestionario.html">CUESTIONARIO</a>
+    </nav>
+
+</header>
+
+<main>
+
+<section>
+
+<div class="content">
+
+<h2>JSON</h2>
+
+<p>
+    JSON significa JavaScript Object Notation. Es un formato de texto utilizado
+    para almacenar y transmitir información de manera organizada.
+</p>
+
+<h3>¿Por qué es importante?</h3>
+
+<p>
+    JSON es muy utilizado para intercambiar información entre aplicaciones,
+    servidores y APIs porque tiene una estructura sencilla y fácil de leer.
+</p>
+
+<h3>Pares clave-valor</h3>
+
+<p>
+    Los datos en JSON se organizan mediante pares formados por una clave
+    y un valor.
+</p>
+
+<pre><code>{
+    "nombre": "Royal Club",
+    "categoria": "Web",
+    "activo": true
+}</code></pre>
+
+<h3>Objetos</h3>
+
+<p>
+    Un objeto JSON se encuentra entre llaves y puede contener diferentes
+    propiedades.
+</p>
+
+<pre><code>{
+    "producto": "Royal Club",
+    "precio": 0,
+    "disponible": true
+}</code></pre>
+
+<h3>Arreglos</h3>
+
+<p>
+    Los arreglos permiten guardar varios valores dentro de una lista.
+</p>
+
+<pre><code>{
+    "tecnologias": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+    ]
+}</code></pre>
+
+<h3>Objeto JavaScript y cadena JSON</h3>
+
+<table>
+
+<tr>
+    <th>Objeto JavaScript</th>
+    <th>JSON</th>
+</tr>
+
+<tr>
+    <td>
+        <code>{ nombre: "Royal Club" }</code>
+    </td>
+
+    <td>
+        <code>{ "nombre": "Royal Club" }</code>
+    </td>
+</tr>
+
+<tr>
+    <td>
+        Es utilizado directamente dentro del programa.
+    </td>
+
+    <td>
+        Es una cadena de texto con un formato estándar.
+    </td>
+</tr>
+
+</table>
+
+<h3>JSON y las APIs</h3>
+
+<p>
+    Las aplicaciones web pueden comunicarse con servidores mediante APIs.
+    El servidor puede enviar información en formato JSON y JavaScript puede
+    recibir esos datos para mostrarlos en la página.
+</p>
+
+<pre><code>fetch("https://ejemplo.com/api/datos")
+    .then(respuesta => respuesta.json())
+    .then(datos => console.log(datos));</code></pre>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+    <strong>ROYAL CLUB</strong>
+    <br>
+    Proyecto educativo de desarrollo web
+</footer>
+
+</body>
+</html>
