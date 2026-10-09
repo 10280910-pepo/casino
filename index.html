@@ -1,130 +1,220 @@
-```html
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Royal Night Casino</title>
+    <title>Buckshot Roulette</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Special+Elite&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Royal Night</h1>
-        <p>CASINO ARCADE</p>
+    <header id="header">
+        <div class="logo">ORG</div>
 
         <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#juegos">Juegos</a>
-            <a href="#cartas">Cartas</a>
+            <a href="#inicio">INICIO</a>
+            <a href="#juego">EL JUEGO</a>
+            <a href="#personajes">PERSONAJES</a>
+            <a href="#atmosfera">ATMÓSFERA</a>
         </nav>
     </header>
 
+
+    <!-- INICIO -->
     <section id="inicio" class="hero">
-        <div class="hero-text">
-            <h2>Bienvenido a Royal Night</h2>
-            <p>
-                Un lugar de entretenimiento inspirado en los grandes casinos,
-                con juegos interactivos y animaciones.
-            </p>
 
-            <a href="#juegos" class="boton">JUGAR AHORA</a>
+        <div class="hero-content">
+
+            <div class="title-area">
+
+                <div class="main-title">
+                    <span class="letters">DESTINO</span>
+                    <span class="letters green">FINAL</span>
+                </div>
+
+                <p class="subtitle">
+                    UNA NOCHE UNA ALMA QUEDA EN PENA
+                </p>
+
+                <p class="description">
+                    UN JUEGO PARA LOS QUE SE TARAVEN A JUGAR CON LA MUERTE Y SU ALMA
+                </p>
+
+                <button id="discoverBtn">
+                    ENTRAR
+                </button>
+
+            </div>
+
+
+            <!-- CARTAS AL LADO DEL NOMBRE -->
+            <div class="hero-cards">
+
+                <div class="card card-one">
+                    <div class="card-inner">
+                        <span>♠</span>
+                        <small>A</small>
+                    </div>
+                </div>
+
+                <div class="card card-two">
+                    <div class="card-inner">
+                        <span>♣</span>
+                        <small>7</small>
+                    </div>
+                </div>
+
+                <div class="card card-three">
+                    <div class="card-inner">
+                        <span>♦</span>
+                        <small>K</small>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
-    </section>
 
-    <section id="juegos" class="juegos">
-
-        <h2>Juegos</h2>
-
-        <div class="contenedor-juegos">
-
-            <!-- RULETA -->
-            <div class="juego">
-                <h3>Ruleta</h3>
-
-                <div class="ruleta" id="ruleta">
-                    <div class="centro">R</div>
-                </div>
-
-                <button onclick="girarRuleta()">Girar ruleta</button>
-
-                <p id="resultadoRuleta">
-                    Presiona el botón para comenzar
-                </p>
-            </div>
-
-
-            <!-- SIMBOLOS -->
-            <div class="juego">
-                <h3>Máquina de símbolos</h3>
-
-                <div class="slots">
-                    <span id="slot1">★</span>
-                    <span id="slot2">♠</span>
-                    <span id="slot3">♦</span>
-                </div>
-
-                <button onclick="girarSlots()">Girar</button>
-
-                <p id="resultadoSlots">
-                    ¡Intenta conseguir tres iguales!
-                </p>
-            </div>
-
-
-            <!-- CARTAS -->
-            <div class="juego" id="cartas">
-                <h3>Elige una carta</h3>
-
-                <div class="cartas">
-
-                    <div class="carta" onclick="elegirCarta(this)">
-                        <div class="dorso">?</div>
-                    </div>
-
-                    <div class="carta" onclick="elegirCarta(this)">
-                        <div class="dorso">?</div>
-                    </div>
-
-                    <div class="carta" onclick="elegirCarta(this)">
-                        <div class="dorso">?</div>
-                    </div>
-
-                </div>
-
-                <p id="resultadoCarta">
-                    Elige una carta
-                </p>
-            </div>
-
+        <div class="scroll-text">
+            SCROLL PARA CONTINUAR
         </div>
 
     </section>
 
 
-    <section class="galeria">
+    <!-- EL JUEGO -->
+    <section id="juego" class="section dark-section">
 
-        <h2>Royal Night</h2>
+        <div class="section-title">
+            <span class="letters">TU MUERTE</span>
+        </div>
 
-        <div class="imagenes">
+        <div class="content-grid">
 
-            <img
-                src="https://images.unsplash.com/photo-1518893883800-45cd0954574b?auto=format&fit=crop&w=800&q=80"
-                alt="Cartas de juego">
+            <div class="text-box reveal-left">
+                <p>
+               VEN Y MUESTRA QE NO ERES UN COBARDE 
+                </p>
 
-            <img
-                src="https://images.unsplash.com/photo-1605870445919-838d190e8e1b?auto=format&fit=crop&w=800&q=80"
-                alt="Mesa de juego">
+                <p>
+                    TODO LO QUE HACES TIENE CONSECUENCIAS Y ESAS ASEGURA TU MUERTE 
+                </p>
+            </div>
 
-            <img
-                src="https://images.unsplash.com/photo-1518544887879-ef9c7c2c9e7e?auto=format&fit=crop&w=800&q=80"
-                alt="Fichas decorativas">
+            <div class="info-card reveal-right">
+                <span class="number">01</span>
+                <h3>ESTRATEGIA</h3>
+                <p>
+                    Cada decisión que tomes puede cambiar el rumbo del juego y de tu vida
+                </p>
+            </div>
+
+            <div class="info-card reveal-right">
+                <span class="number">02</span>
+                <h3>RIESGO</h3>
+                <p>
+                    Perderlo todo tu y tu alma
+                </p>
+            </div>
+
+            <div class="info-card reveal-right">
+                <span class="number">03</span>
+                <h3>TENSIÓN</h3>
+                <p>
+                    La atmósfera mantiene la atención durante toda la partida.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PERSONAJES -->
+    <section id="personajes" class="section character-section">
+
+        <div class="section-title">
+            <span class="letters">PERSONAJES</span>
+        </div>
+
+        <div class="character-container">
+
+            <div class="character-card reveal-left">
+                <div class="character-number">01</div>
+
+                <div class="character-face">
+                    ?
+                </div>
+
+                <h3>EL OPONENTE</h3>
+
+                <p>
+                No juega para ganar… juega para ver a su  prxima victima 
+                </p>
+            </div>
+
+
+            <div class="character-card reveal-right">
+                <div class="character-number">02</div>
+
+                <div class="character-face">
+                    ?
+                </div>
+
+                <h3>EL JUGADOR</h3>
+
+                <p>
+                Tu eliges tu propio destino
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ATMÓSFERA -->
+    <section id="atmosfera" class="section atmosphere-section">
+
+        <div class="section-title">
+            <span class="letters">ATMÓSFERA</span>
+        </div>
+
+        <div class="atmosphere-content">
+
+            <div class="atmosphere-box reveal-left">
+                <span class="big-number">01</span>
+                <h3>CASINO</h3>
+                <p>
+                    Una mesa oscura rodeada de luces tenues,
+                    cartas y elementos de casino.
+                </p>
+            </div>
+
+            <div class="atmosphere-box reveal-right">
+                <span class="big-number">02</span>
+                <h3>MISTERIO</h3>
+                <p>
+                    El ambiente crea una sensación constante
+                    de incertidumbre.
+                </p>
+            </div>
+
+            <div class="atmosphere-box reveal-left">
+                <span class="big-number">03</span>
+                <h3>TENSIÓN</h3>
+                <p>
+                    La iluminación y el diseño ayudan a crear
+                    una experiencia intensa.
+                </p>
+            </div>
 
         </div>
 
@@ -132,9 +222,9 @@
 
 
     <footer>
-        <h2>Royal Night</h2>
-        <p>Casino Arcade • Entretenimiento</p>
+        <p>BUCKSHOT ROULETTE — FAN WEBSITE</p>
     </footer>
+
 
     <script src="js/script.js"></script>
 
