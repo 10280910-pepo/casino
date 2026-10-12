@@ -1,248 +1,81 @@
+
 document.addEventListener("DOMContentLoaded", () => {
+    // Cierra el menú de Bootstrap al seleccionar una sección.
+    const menu = document.getElementById("menu");
+    const links = document.querySelectorAll("#menu .nav-link");
 
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("nav a");
-    const header = document.getElementById("header");
-    const hero = document.getElementById("inicio");
-
-
-    /* =========================
-       CREAR ANIMACIÓN LETRA
-       POR LETRA
-    ========================= */
-
-    function prepareLetters() {
-
-        const elements = document.querySelectorAll(".letters");
-
-        elements.forEach(element => {
-
-            const text = element.textContent.trim();
-
-            element.innerHTML = "";
-
-            [...text].forEach((character, index) => {
-
-                const letter = document.createElement("span");
-
-                letter.classList.add("letter");
-
-                letter.style.setProperty("--i", index);
-
-                if (character === " ") {
-                    letter.innerHTML = "&nbsp;";
-                } else {
-                    letter.textContent = character;
-                }
-
-                element.appendChild(letter);
-            });
-
+    links.forEach((link) => {
+        link.addEventListener("click", () => {
+            if (window.innerWidth < 992 && menu.classList.contains("show")) {
+                bootstrap.Collapse.getOrCreateInstance(menu).hide();
+            }
         });
+    });
 
-    }
-
-    prepareLetters();
-
-
-    /* =========================
-       REPETIR ANIMACIÓN
-    ========================= */
-
-    function replaySection(section) {
-
-        if (!section) return;
-
-        section.classList.remove("visible");
-
-        /* Quita movimiento anterior de las cartas */
-        const cards = section.querySelectorAll(".card");
-
-        cards.forEach(card => {
-            card.classList.remove("floating");
-        });
-
-        /* Obliga al navegador a reiniciar la animación */
-        void section.offsetWidth;
-
-        section.classList.add("visible");
-
-
-        /* Las cartas empiezan a flotar después de repartirse */
-
-        if (section.id === "inicio") {
-
-            setTimeout(() => {
-
-                if (section.classList.contains("visible")) {
-
-                    cards.forEach(card => {
-                        card.classList.add("floating");
-                    });
-
-                }
-
-            }, 1900);
-        }
-
-    }
-
-
-    /* =========================
-       ANIMACIÓN INICIAL
-    ========================= */
-
-    setTimeout(() => {
-        replaySection(hero);
-    }, 200);
-
-
-    /* =========================
-       DETECTAR CAMBIO DE SECCIÓN
-    ========================= */
-
-    let activeSection = null;
-
-    const observer = new IntersectionObserver(
-        entries => {
-
-            entries.forEach(entry => {
-
-                if (
-                    entry.isIntersecting &&
-                    entry.intersectionRatio >= 0.45
-                ) {
-
-                    const section = entry.target;
-
-                    if (activeSection !== section) {
-
-                        activeSection = section;
-
-                        replaySection(section);
-                    }
-                }
-
-            });
-
-        },
-        {
-            threshold: [0.45]
-        }
+    // Efecto suave en las tarjetas al entrar en pantalla.
+    const cards = document.querySelectorAll(
+        ".feature-card, .character-card, .atmosphere-card, .intro-panel"
     );
 
-
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-
-
-    /* =========================
-       MENÚ
-    ========================= */
-
-    navLinks.forEach(link => {
-
-        link.addEventListener("click", event => {
-
-            event.preventDefault();
-
-            const targetId = link.getAttribute("href");
-
-            const target = document.querySelector(targetId);
-
-            if (!target) return;
-
-
-            target.scrollIntoView({
-                behavior: "smooth"
+    if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
             });
+        }, { threshold: 0.12 });
 
-
-            /* Reproduce la animación al cambiar */
-            setTimeout(() => {
-
-                activeSection = target;
-
-                replaySection(target);
-
-            }, 500);
-
+        cards.forEach((card) => {
+            card.classList.add("reveal");
+            observer.observe(card);
         });
-
-    });
-
-
-    /* =========================
-       HEADER AL HACER SCROLL
-    ========================= */
-
-    window.addEventListener("scroll", () => {
-
-        if (window.scrollY > 80) {
-            header.classList.add("small");
-        } else {
-            header.classList.remove("small");
-        }
-
-    });
-
-
-    /* =========================
-       BOTÓN DESCUBRIR
-    ========================= */
-
-    const discoverBtn = document.getElementById("discoverBtn");
-
-    if (discoverBtn) {
-
-        discoverBtn.addEventListener("click", () => {
-
-            const juego = document.getElementById("juego");
-
-            juego.scrollIntoView({
-                behavior: "smooth"
-            });
-
-        });
-
     }
+});
 
+/* =====================================
+   CAMBIO DE IDIOMA CON JSON
+===================================== */
 
-    /* =========================
-       EFECTO EXTRA AL MOVER
-       EL MOUSE SOBRE LAS CARTAS
-    ========================= */
+const languageToggle = document.getElementById("languageToggle");
 
-    const cards = document.querySelectorAll(".card");
+let idiomaActual = "es";
+let traducciones = {};
 
-    cards.forEach(card => {
+fetch("./traducciones.json")
+    .then(function (respuesta) {
 
-        card.addEventListener("mousemove", event => {
-
-            const rect = card.getBoundingClientRect();
-
-            const x = event.clientX - rect.left;
-            const y = event.clientY - rect.top;
-
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-
-            const rotateX = (y - centerY) / 12;
-            const rotateY = (centerX - x) / 12;
-
-            card.style.filter =
-                `brightness(1.08)`;
-
-        });
-
-
-        card.addEventListener("mouseleave", () => {
-
-            card.style.filter = "brightness(1)";
-
-        });
-
+        return respuesta.json();
+    })
+    .then(function (datos) {
+        traducciones = datos;
+        cambiarIdioma("es");
+        console.log("Traducciones cargadas correctamente");
     });
 
-});
+function cambiarIdioma(idioma) {
+    idiomaActual = idioma;
+
+    document.querySelectorAll("[data-i18n]").forEach(function (elemento) {
+        const clave = elemento.getAttribute("data-i18n");
+        const texto = traducciones[idioma]?.[clave];
+
+        if (texto !== undefined) {
+            elemento.textContent = texto;
+        }
+    });
+
+    document.documentElement.lang = idioma;
+
+    if (languageToggle) {
+        languageToggle.textContent = idioma === "es" ? "EN" : "ES";
+    }
+}
+
+if (languageToggle) {
+    languageToggle.addEventListener("click", function () {
+        const nuevoIdioma = idiomaActual === "es" ? "en" : "es";
+        cambiarIdioma(nuevoIdioma);
+    });
+}
