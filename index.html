@@ -308,5 +308,32 @@
     <!-- JavaScript propio -->
     <script src="js/script.js"></script>
 
+<audio id="musica-fondo" loop>
+    <source src="audio/buckshot.mp3" type="audio/mpeg">
+</audio>
+
+<button id="boton-musica" onclick="controlarMusica()">
+    ▶ Reproducir música
+</button>
+
+<script>
+function controlarMusica() {
+    const musica = document.getElementById("musica-fondo");
+    const boton = document.getElementById("boton-musica");
+
+    if (musica.paused) {
+        musica.play().then(() => {
+            boton.textContent = "⏸ Pausar música";
+        }).catch(error => {
+            console.error("No se pudo reproducir la música:", error);
+        });
+    } else {
+        musica.pause();
+        boton.textContent = "▶ Reproducir música";
+    }
+}
+</script>
+
+
 </body>
 </html>
