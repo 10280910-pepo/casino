@@ -1,330 +1,89 @@
 
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Buckshot Roulette | Destino Final</title>
-    <meta name="description" content="Una experiencia oscura de cartas, estrategia y misterio.">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Special+Elite&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-
-    <!-- CSS propio -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050608">
+  <title>NEXUS 2049</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-    <!-- MENU -->
-    <header id="header">
-        <nav class="navbar navbar-expand-lg navbar-dark container-fluid px-4 py-3">
-
-            <a class="navbar-brand logo" href="#inicio">ORG</a>
-
-            <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#menuPrincipal"
-                aria-controls="menuPrincipal"
-                aria-expanded="false"
-                aria-label="Abrir menú">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="menuPrincipal">
-                <ul class="navbar-nav ms-auto gap-lg-3 align-items-lg-center">
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#inicio" data-i18n="inicio">INICIO</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#juego" data-i18n="juego">EL JUEGO</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#personajes" data-i18n="personajes">PERSONAJES</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#atmosfera" data-i18n="atmosfera">ATMÓSFERA</a>
-                    </li>
-
-                    <li class="nav-item mt-2 mt-lg-0">
-                        <button id="languageToggle"
-                            class="btn btn-outline-success btn-sm me-2"
-                            type="button">
-                            EN
-                        </button>
-
-                        <a href="#juego"
-                            class="btn btn-outline-success btn-sm px-4"
-                            data-i18n="entrar">
-                            ENTRAR A LA MESA
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-
-        <!-- INICIO -->
-        <section id="inicio" class="hero">
-
-            <div class="container hero-content">
-
-                <div class="title-area">
-
-                    <div class="main-title">
-                        <span class="letters" data-i18n="titulo1">DESTINO</span>
-                        <span class="letters green" data-i18n="titulo2">FINAL</span>
-                    </div>
-
-                    <p class="subtitle" data-i18n="subtitulo">
-                        UNA NOCHE, UN ALMA QUEDA EN PENA
-                    </p>
-
-                    <p class="description" data-i18n="descripcion">
-                        UN JUEGO PARA QUIENES SE ATREVEN A JUGAR CON SU DESTINO.
-                        CADA CARTA OCULTA UN SECRETO Y CADA DECISIÓN TIENE UN PRECIO.
-                    </p>
-
-                    <a href="#juego"
-                        class="btn btn-outline-success btn-lg mt-3"
-                        id="discoverBtn">
-                        <span data-i18n="descubrir">ENTRAR</span>
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
-
-                </div>
-        <!-- EL JUEGO -->
-        <section id="juego" class="section dark-section">
-
-            <div class="container">
-
-                <div class="section-title text-center">
-                    <span class="letters" data-i18n="destino">TU DESTINO</span>
-                </div>
-
-                <div class="row g-4 align-items-stretch content-grid">
-
-                    <div class="col-12 col-lg-6">
-                        <div class="text-box reveal-left h-100">
-
-                            <h3 data-i18n="atreves">¿TE ATREVES A JUGAR?</h3>
-
-                            <p data-i18n="calma">
-                                VEN Y DEMUESTRA QUE PUEDES MANTENER LA CALMA
-                                CUANDO TODO ESTÁ EN TU CONTRA.
-                            </p>
-
-                            <p data-i18n="decisiones">
-                                CADA DECISIÓN TIENE CONSECUENCIAS.
-                                EN ESTA MESA, NUNCA SABES QUÉ TE ESPERA
-                                EN LA SIGUIENTE JUGADA.
-                            </p>
-
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-2">
-                        <div class="info-card reveal-right h-100">
-                            <span class="number">01</span>
-                            <h3 data-i18n="estrategia">ESTRATEGIA</h3>
-                            <p data-i18n="estrategiaDesc">
-                                Cada decisión puede cambiar el rumbo de la partida.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-2">
-                        <div class="info-card reveal-right h-100">
-                            <span class="number">02</span>
-                            <h3 data-i18n="riesgo">RIESGO</h3>
-                            <p data-i18n="riesgoDesc">
-                                Nada está asegurado y cada movimiento cuenta.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-2">
-                        <div class="info-card reveal-right h-100">
-                            <span class="number">03</span>
-                            <h3 data-i18n="tension">TENSIÓN</h3>
-                            <p data-i18n="tensionDesc">
-                                El silencio puede ser más inquietante que cualquier palabra.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- PERSONAJES -->
-        <section id="personajes" class="section character-section">
-
-            <div class="container">
-
-                <div class="section-title text-center">
-                    <span class="letters" data-i18n="personajesTitulo">PERSONAJES</span>
-                </div>
-
-                <div class="row g-4 justify-content-center character-container">
-
-                    <div class="col-12 col-md-6 col-lg-5">
-                        <article class="character-card reveal-left h-100">
-
-                            <div class="character-number">01</div>
-
-                            <div class="character-face">
-                                <i class="bi bi-question-lg"></i>
-                            </div>
-
-                            <h3 data-i18n="oponente">EL OPONENTE</h3>
-
-                            <p data-i18n="oponenteDesc">
-                                Nadie conoce su próxima jugada.
-                                No juega solamente para ganar…
-                                juega para descubrir quién será
-                                su próximo rival.
-                            </p>
-
-                        </article>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-5">
-                        <article class="character-card reveal-right h-100">
-
-                            <div class="character-number">02</div>
-
-                            <div class="character-face">
-                                <i class="bi bi-person-fill"></i>
-                            </div>
-
-                            <h3 data-i18n="jugador">EL JUGADOR</h3>
-
-                            <p data-i18n="jugadorDesc">
-                                Has aceptado sentarte a la mesa.
-                                Ahora debes pensar cada movimiento,
-                                porque tu siguiente decisión
-                                podría cambiarlo todo.
-                            </p>
-
-                        </article>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- ATMOSFERA -->
-        <section id="atmosfera" class="section atmosphere-section">
-
-            <div class="container">
-
-                <div class="section-title text-center">
-                    <span class="letters" data-i18n="atmosferaTitulo">ATMÓSFERA</span>
-                </div>
-
-                <div class="row g-4 atmosphere-content">
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <article class="atmosphere-box reveal-left h-100">
-
-                            <span class="big-number">01</span>
-
-                            <h3 data-i18n="casino">CASINO</h3>
-
-                            <p data-i18n="casinoDesc">
-                                Una mesa oscura, cartas sobre el tapete
-                                y luces tenues que apenas iluminan
-                                la habitación.
-                            </p>
-
-                        </article>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <article class="atmosphere-box reveal-right h-100">
-
-                            <span class="big-number">02</span>
-
-                            <h3 data-i18n="misterio">MISTERIO</h3>
-
-                            <p data-i18n="misterioDesc">
-                                Un oponente del que nadie conoce
-                                sus intenciones. Cada silencio
-                                parece esconder un secreto.
-                            </p>
-
-                        </article>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <article class="atmosphere-box reveal-left h-100">
-
-                            <span class="big-number">03</span>
-
-                            <h3 data-i18n="tensionAtmosfera">TENSIÓN</h3>
-
-                            <p data-i18n="tensionAtmosferaDesc">
-                                Sombras, luces y decisiones
-                                inesperadas crean una experiencia
-                                inquietante en cada partida.
-                            </p>
-
-                        </article>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- PIE DE PAGINA -->
-    <footer class="text-center py-4">
-        <p class="mb-2" data-i18n="pie">
-            BUCKSHOT ROULETTE — FAN WEBSITE
-        </p>
-
-        <small data-i18n="fraseFinal">
-            EL DESTINO ESTÁ SOBRE LA MESA.
-        </small>
-    </footer>
-
-    <!-- Bootstrap JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- JavaScript propio -->
-    <script src="js/script.js"></script>
-
-
-<audio id="musica-fondo" loop>
-    <source src="audio/buckshot.mp3" type="audio/mpeg">
-</audio>
-
-<button id="boton-musica" onclick="
-    const musica = document.getElementById('musica-fondo');
-    if (musica.paused) {
-        musica.play();
-        this.textContent = '⏸ Pausar música';
-    } else {
-        musica.pause();
-        this.textContent = '▶ Reproducir música';
-    }
-">▶ Reproducir música</button>
-
-
-
+  <div class="scanlines"></div>
+
+  <main>
+    <section class="hero" id="inicio">
+
+      <div class="city">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="ssstik.io_1791940785253.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="shade"></div>
+      <div class="ambient"></div>
+
+      <div class="content">
+        <div class="eyebrow">SISTEMA DEL FUTURO // 2049</div>
+
+        <h1>
+          EL MUNDO
+          <span>HA CAMBIADO.</span>
+        </h1>
+
+    </section>
+
+    <section class="projects-section" id="proyectos">
+      <div class="section-label">01 / EXPLORACIÓN</div>
+      <h2>OTRAS REALIDADES.</h2>
+
+      <div class="project-grid">
+
+        <article class="project">
+          <small>EXP-001</small>
+          <h3>NEON DISTRICT</h3>
+          <p>Luces que atraviesan la oscuridad de la ciudad.</p>
+        </article>
+
+        <article class="project">
+          <small>EXP-002</small>
+          <h3>VOID PROTOCOL</h3>
+          <p>Un sistema misterioso escondido entre las sombras.</p>
+        </article>
+
+        <article class="project">
+          <small>EXP-003</small>
+          <h3>LAST SIGNAL</h3>
+          <p>Una señal perdida llega desde una zona abandonada.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="projects-section" id="archivo">
+      <div class="section-label">02 / ARCHIVO CLASIFICADO</div>
+      <h2>ACCESO RESTRINGIDO.</h2>
+
+      <p class="description">
+        Has alcanzado el límite del sistema. ¿Querés descubrir qué hay detrás?
+      </p>
+
+      <div class="buttons">
+        <button class="btn primary" id="access">
+          INICIAR SECUENCIA ↗
+        </button>
+      </div>
+
+      <p id="message" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <span>NEXUS CORPORATION © 2049</span>
+    <span>REALIDAD ALTERADA // ONLINE</span>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
