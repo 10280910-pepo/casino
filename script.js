@@ -56,3 +56,25 @@ if (accessButton && message) {
     }, 1100);
   });
 }
+
+const musica = document.getElementById("musica");
+const boton = document.getElementById("botonMusica");
+
+boton.addEventListener("click", async () => {
+    if (musica.paused) {
+        try {
+            await musica.play();
+            boton.textContent = "⏸ PAUSAR MÚSICA";
+        } catch (error) {
+            console.error("No se pudo reproducir la música:", error);
+            boton.textContent = "ERROR AL REPRODUCIR";
+        }
+    } else {
+        musica.pause();
+        boton.textContent = "▶ REPRODUCIR MÚSICA";
+    }
+});
+
+musica.addEventListener("ended", () => {
+    boton.textContent = "▶ REPRODUCIR MÚSICA";
+});

@@ -501,3 +501,28 @@ footer {
     scroll-behavior: auto !important;
   }
 }
+
+.reproductor {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+#botonMusica {
+    background: transparent;
+    color: #7cff8b;
+    border: 1px solid transparent;
+    padding: 14px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#botonMusica:hover {
+    color: white;
+    text-shadow: 0 0 10px #7cff8b;
+    border-color: #7cff8b;
+}
